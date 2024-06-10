@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Users</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Instagram Users</h1>
+    <div class="profile">
+        <hr>
+        <% for(let profile of users){ %>
+            <div class="pro">
+                <h3 class="username">Username: @<%= profile.username %></h3>
+                <img src="<%= profile.img %>" alt="">
+                <h3 class="id">ID: <%= profile.id %></h3>
+                <h4 class="bio">Bio: <%= profile.bio %></h4>
+            </div>
+            <div class="btnDiv">
+                <a href="http://localhost:8080/visit/<%= profile.id %>">visit</a>&nbsp;&nbsp;
+                <a href="http://localhost:8080/users/edit/<%= profile.id %>">edit</a>&nbsp;&nbsp;
+                <form method="post" action="/users/<%= profile.id %>?_method=DELETE">
+                    <button>Delete</button>
+                </form>
+            </div>
+            <hr>
+            <br>
+        <% } %>
+    </div>
+    <a href="http://localhost:8080/create">Create Account</a><br><br>
+
+</body>
+</html>

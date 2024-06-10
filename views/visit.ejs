@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Details:</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="vpost">
+        <h1 class="vHeader">Here Is Your Post In Detail</h1>
+            <h3 class="vusername">Username: @<%= profile.username %></h3>
+            <img src="<%= profile.img %>" alt="">
+            <h3 class="vid">ID: <%= profile.id %></h3>
+            <h4 class="vbio">Bio: <%= profile.bio %></h4>
+            <b><a href="http://localhost:8080/users" class="vanchor">View All Users</a></b>
+    </div>
+</body>
+</html>

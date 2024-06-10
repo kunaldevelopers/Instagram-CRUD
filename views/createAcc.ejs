@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Instagram Account</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="cdiv">
+        <h1 class="cheader">Create Instagram Account</h1>
+        <form method="post" action="http://localhost:8080/create/" class="cform">
+            <h4 class="ch4">Your Generate ID: <%= id %> </h4>
+            <input type="text" name="username" placeholder="Enter Username" class="cusername"><br><br>
+            <input type="text" name="img" id="" placeholder="Enter Image Url" class="cimg"><br><br>
+            <textarea name="bio" cols="30" rows="10" placeholder="Enter Bio Details" class="cbio"></textarea><br><br>
+            <button class="cbtn">submit</button>
+        </form>
+    </div>
+</body>
+</html>
